@@ -1,3 +1,3 @@
 # startup
 
-# modified from github!
+# modified from github! again lol
