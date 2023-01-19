@@ -1,3 +1,3 @@
 # startup
 
-# modified from vscode!
+# modified from github!
