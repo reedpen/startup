@@ -14,4 +14,6 @@
 ## Social aspect of website
 ### Allow users to share recipes on their page
 ### Instagram Style explore page that displays shared recipes in an appealing format
-
+### Social media integration
+## Support for video upload and youtube links
+### Allow the users to upload their own videos to the site or pull existing links from Youtube.
