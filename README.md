@@ -4,9 +4,9 @@
 ### also figured out how to resolve a merge in a git repo!
 
 
-# Specification
-## User oriented recipe sharing site
 
+# User oriented recipe sharing site
+# Features
 ## Concise ingredient and instruction delivery
 ### Story behind the recipe comes second. Prioritizes easily accessable information
 ## Allow users to "branch" recipes and repost with modifications
