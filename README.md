@@ -11,6 +11,8 @@
 
 # User oriented recipe sharing site
 # Features
+## Allow users to sort recipes by meal, cuisine and other specification.
+## Recipe search functionality.
 ## Concise ingredient and instruction delivery
 ### Story behind the recipe comes second. Prioritizes easily accessable information
 ## Allow users to "branch" recipes and repost with modifications
