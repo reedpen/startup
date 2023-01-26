@@ -4,6 +4,10 @@
 ### also figured out how to resolve a merge in a git repo!
 
 
+# Elevator Pitch
+## The world of recipe blogging is bloated and needs a complete redesign.
+## I plan to create a website that cuts out the all the storytelling bloat that comes with a recipe blog and provide home cooks around the world a centralized recipe sharing site that prioritizes the recipe, not the story behind it. 
+
 
 # User oriented recipe sharing site
 # Features
@@ -21,6 +25,3 @@
 ![recipe1](https://user-images.githubusercontent.com/26552740/214924851-63b07152-5d6f-44c4-8f04-2a101186fc62.png)
 
 
-# Elevator Pitch
-## The world of recipe blogging is bloated and needs a complete redesign.
-## I plan to create a website that cuts out the all the storytelling bloat that comes with a recipe blog and provide home cooks around the world a centralized recipe sharing site that prioritizes the recipe, not the story behind it. 
