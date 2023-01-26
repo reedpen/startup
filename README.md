@@ -17,3 +17,5 @@
 ### Social media integration
 ## Support for video upload and youtube links
 ### Allow the users to upload their own videos to the site or pull existing links from Youtube.
+![recipe2](https://user-images.githubusercontent.com/26552740/214924849-91a7abf3-979e-4441-a823-b32735271ecf.png)
+![recipe1](https://user-images.githubusercontent.com/26552740/214924851-63b07152-5d6f-44c4-8f04-2a101186fc62.png)
