@@ -3,7 +3,7 @@
 # html css deliverable notes
 ## using bootstrap is SO much easier.. do it
 ## making small subtle changes towards your desired product is the best way to approach design, don't try to do too much too fast
-
+## don't be afraid to take inspiration! there is so much out there you can use and base your code off of
 
 
 
