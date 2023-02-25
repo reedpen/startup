@@ -1,5 +1,22 @@
 # startup
 
+# html css deliverable notes
+## using bootstrap is SO much easier.. do it
+## making small subtle changes towards your desired product is the best way to approach design, don't try to do too much too fast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### learned how to effectivley navigate git using both the vs code extension and the command line
 ### also figured out how to resolve a merge in a git repo!
 
