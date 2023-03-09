@@ -34,7 +34,19 @@
     
     </header>
     <main role="main">
+      <div id="welcome-message"></div>
 
+          <script>
+          // Get the "username" item from localStorage
+          const username = localStorage.getItem("username");
+
+          // Check if the "username" item exists in localStorage
+          if (username) {
+            // If the "username" item exists, set the text of the welcome message to include the username
+            const welcomeMessage = document.getElementById("welcome-message");
+            welcomeMessage.textContent = `Welcome, ${username}!`;
+          } 
+          </script>
       
       <section class="jumbotron text-center">
         <div class="container">
