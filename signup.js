@@ -3,6 +3,7 @@ function signUp() {
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  const password2 = document.getElementById("password2").value;
 
   // Set up regular expressions to match the email and password formats
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,7 +18,10 @@ function signUp() {
     alert("Password must be at least 8 characters long and contain at least one letter and one number");
     return false;
   }
-
+  if (password !== password2){
+    alert("Passwords must match!");
+    return false;
+  }
   // If the email and password meet the required format, save them locally along with the username
   localStorage.setItem("username", username);
   localStorage.setItem("email", email);

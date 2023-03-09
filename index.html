@@ -34,12 +34,13 @@
     
     </header>
     <main role="main">
-      <div id="welcome-message"></div>
+      <div id="welcome-message" class = "navbar navbar-light d-flex align-items-center"></div>
 
           <script>
           // Get the "username" item from localStorage
-          const username = localStorage.getItem("username");
-
+          const email = localStorage.getItem("email");
+          const arr = email.split("@")
+          const username = arr[0]
           // Check if the "username" item exists in localStorage
           if (username) {
             // If the "username" item exists, set the text of the welcome message to include the username
