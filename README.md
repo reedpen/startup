@@ -1,7 +1,32 @@
 # startup
 
-### learned how to effectivley navigate git using both the vs code extension and the command line
-### also figured out how to resolve a merge in a git repo!
+## html css deliverable notes
+ using bootstrap is SO much easier.. do it
+ making small subtle changes towards your desired product is the best way to approach design, don't try to do too much too fast
+ don't be afraid to take inspiration! there is so much out there you can use and base your code off of
+
+ bootstrap has great documentation, use it often and with purpose
+## JS deliverable notes
+
+writing js inline with <script> allows for easy single use functions to be defined without making a seperate file
+using the DOM allows for the powerful ablity to manipulate HTML using javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## github notes
+ learned how to effectivley navigate git using both the vs code extension and the command line
+ also figured out how to resolve a merge in a git repo!
 
 
 # Elevator Pitch
