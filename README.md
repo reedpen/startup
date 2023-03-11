@@ -10,6 +10,8 @@
 
 writing js inline with <script> allows for easy single use functions to be defined without making a seperate file
 using the DOM allows for the powerful ablity to manipulate HTML using javascript
+try to reuse functions to minimize extraneous code
+using local memory cannot save to a database
 
 
 
