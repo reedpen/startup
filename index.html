@@ -22,7 +22,7 @@
       </div>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <a href="index.html" class="navbar-brand d-flex align-items-center">
             <strong>Recipes Made EZ!</strong>
           </a>
 
@@ -48,7 +48,18 @@
             welcomeMessage.textContent = `Welcome, ${username}!`;
           } 
           </script>
+
+      	<div id="saved" class = "navbar navbar-light d-flex align-items-center"></div>
+
+        <script>
+          const container = document.getElementById("saved");
       
+          if (localStorage.getItem("saved") !== null) {
+            const button = document.createElement("button");
+            button.textContent = "Saved";
+            container.appendChild(button);
+          }
+        </script>
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Discover Recipes!</h1
@@ -72,8 +83,9 @@
                   <p class="card-text">Classic American Hamburger</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">30 mins</small>
                   </div>
@@ -87,8 +99,9 @@
                   <p class="card-text">Super Tasty White Chicken Chili!</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">45 mins</small>
                   </div>
@@ -102,8 +115,9 @@
                   <p class="card-text">Traditional Minestrone</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">60 mins</small>
                   </div>
@@ -118,8 +132,9 @@
                   <p class="card-text">Classic New York Bagel</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">50 mins</small>
                   </div>
@@ -133,8 +148,9 @@
                   <p class="card-text">Neapolitan Style Pizza (from scratch!)</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">120 mins</small>
                   </div>
@@ -148,8 +164,9 @@
                   <p class="card-text">Hearty Potato, Bacon and Cheese soup</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">45 mins</small>
                   </div>
@@ -164,8 +181,9 @@
                   <p class="card-text">Fan Favorite Chocolate Chip Cookies</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">30 mins</small>
                   </div>
@@ -179,8 +197,9 @@
                   <p class="card-text">French Onion Soup Made Easy</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">30 mins</small>
                   </div>
@@ -194,8 +213,9 @@
                   <p class="card-text">Ballistic Bundt Cake</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
                     </div>
                     <small class="text-muted">50 mins</small>
                   </div>
@@ -222,5 +242,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0-next.1/esm/popper.js'></script>
+<script src="save.js"></script>
 </body>
 </html>
