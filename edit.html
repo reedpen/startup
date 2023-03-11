@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+    <link rel="stylesheet" href="./style.css">
+    <script src="save.js"></script>
+    <title>Edit Recipe</title>
+    <style>
+		h1, h2 {
+			color: #008080;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			text-transform: uppercase;
+			font-weight: bold;
+            margin-left: 1rem;
+            margin-top: 1rem;
+		}
+		ul, ol {
+			margin-left: 1.5rem;
+			color: #555;
+		}
+		hr {
+			border-top: 2px solid #ddd;
+			margin: 2rem 0;
+		}
+		p {
+			margin-bottom: 1.5rem;
+			line-height: 1.5;
+			color: #333;
+            margin-left: 1rem;
+		}
+        .recipe-image {
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+	</style>
+</head>
+<body>
+    <main role="main">
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-white">About</h4>
+                            <p class="text-muted">This site is dedicated to recipes and recipes only! None of that 10 hour sob story BS before even listing the ingredients, here we make it easy to get the information you came here for!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <div class="container d-flex justify-content-between">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                        <strong>Recipes Made EZ!</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/500x300" class="img-fluid mb-3 recipe-image" alt="Recipe Image">
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <h2 class="recipe-title-header" id="recipe-title">Recipe Name</h2>
+
+
+                                <input type="text" class="form-control" id="recipe-name" value="Recipe Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ingredients">Ingredients</label>
+                                <textarea class="form-control" id="ingredients" rows="5">Ingredient 1
+Ingredient 2
+Ingredient 3</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="instructions">Instructions</label>
+                                <textarea class="form-control" id="instructions" rows="5">Step 1
+Step 2
+Step 3</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="loadSavedData()">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+        </header>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>A Reed Pennock Website</p>
+            <p>View the source at <a href="url">github.com/reedpen/startup</a>.</p>
+        </div>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0-next.1/esm/popper.js'></script>
+
+</html>
