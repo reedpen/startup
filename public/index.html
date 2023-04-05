@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Recipez</title>
   <link rel="icon" href="favicon.ico" />
+  <script src="endpoints.js"></script>
+  <script src="database.js"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'><link rel="stylesheet" href="./style.css">
 
 </head>
@@ -16,6 +18,7 @@
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About</h4>
               <p class="text-muted">This site is dedicated to recipes and recipes only! None of that 10 hour sob story BS before even listing the ingredients, here we make it easy to get the information you came here for!</p>
+              
             </div>
           </div>
         </div>
@@ -35,7 +38,7 @@
     </header>
     <main role="main">
       <div id="welcome-message" class = "navbar navbar-light d-flex align-items-center"></div>
-      <div id="quote" class="quote-box bg-light text-dark"></div>
+
 
           <script>
           // Get the "username" item from localStorage
@@ -59,16 +62,19 @@
             container.appendChild(button);
           }
         </script>
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Discover Recipes!</h1
-          <p>
-            <div>
-              <a href="signup.html" class="btn btn-primary">Sign up or Log in</a>
-            </div>
-          </p>
-        </div>
-      </section>
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Discover Recipes!</h1>
+
+              <p id="quote" class="quote-box text-muted"></p>
+            <p>
+              <div>
+                <a href="signup.html" class="btn btn-primary">Sign up or Log in</a>
+                <a href="saved.html" class="btn btn-secondary">View Saved Recipes</a>
+              </div>
+            </p>
+          </div>
+        </section>
 
       <div class="album py-5 bg-light">
         <div class="container">
@@ -81,8 +87,8 @@
                   <p class="card-text">Classic American Hamburger</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
-                       <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'burger.html';">View</button>
+                       <button type="button" class="btn btn-sm btn-outline-secondary" onclick="">Save</button>
                     </div>
                     <small class="text-muted">30 mins</small>
                   </div>
@@ -112,7 +118,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'example.html';">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Save</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="">Save</button>
                     </div>
                     <small class="text-muted">60 mins</small>
                   </div>
@@ -227,6 +233,7 @@
         href="https://github.com/reedpen/startup"
         >Source</a
       >
+
       </div>
     </footer>
 <!-- partial -->
@@ -235,5 +242,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0-next.1/esm/popper.js'></script>
 <script src="save.js"></script>
+
 </body>
 </html>
