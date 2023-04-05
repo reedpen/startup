@@ -14,6 +14,11 @@ try to reuse functions to minimize extraneous code
 using local memory cannot save to a database
 
 
+## Service deliverable notes
+when working with websockets, using http will require extra code to set up the server
+MongoDB works very well with javascript thanks to the use of JSON
+endpoints provide lots of resources for accessing data from other places
+
 
 
 
