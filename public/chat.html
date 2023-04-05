@@ -5,20 +5,19 @@
   <title>Recipez</title>
   <link rel="icon" href="favicon.ico" />
   <script src="endpoints.js"></script>
+  <script src="database.js"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'><link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<header>
+  <body>
+    <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About</h4>
               <p class="text-muted">This site is dedicated to recipes and recipes only! None of that 10 hour sob story BS before even listing the ingredients, here we make it easy to get the information you came here for!</p>
-              <h4 class="text-white">Quote</h4>
-              <p id="quote" class="quote-box text-muted"></p>
+              
             </div>
           </div>
         </div>
@@ -36,55 +35,53 @@
       </div>
     
     </header>
-    <main role="main">
-      <div id="welcome-message" class = "navbar navbar-light d-flex align-items-center"></div>
-
-
-          <script>
-          // Get the "username" item from localStorage
-          const username = localStorage.getItem("userName");
-          // Check if the "username" item exists in localStorage
-          if (username) {
-            // If the "username" item exists, set the text of the welcome message to include the username
-            const welcomeMessage = document.getElementById("welcome-message");
-            welcomeMessage.textContent = `Welcome, ${username}!`;
-          } 
-          </script>
-
-        <section class="jumbotron text-center">
-          <div class="container">
-            <h1 class="jumbotron-heading">Saved Recipes</h1>
-          </div>
-        </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
+    <main class="container my-5">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="name">
+            <fieldset id="name-controls">
+              <legend>My Name</legend>
+              <input id="my-name" type="text" />
+            </fieldset>
+            <fieldset id="chat-controls" disabled>
+              <legend>Chat</legend>
+              <input id="new-msg" type="text" />
+              <button onclick="sendMessage()">Send</button>
+            </fieldset>
+            <div id="chat-text"></div>
           </div>
         </div>
-      </div>
+        <div class="col-md-4">
+          A place where you can talk and share recipes and cooking tips with the world!
+        </div>
+        
 
+      </div>
     </main>
 
-    <footer class="text-muted" id = "parentContainer">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>A Reed Pennock Website</p>
-        <a
-        class="text-reset"
-        href="https://github.com/reedpen/startup"
-        >Source</a
-      >
 
-      </div>
-    </footer>
+
+
+  </body>
+  <script src="chatClient.js"></script>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>A Reed Pennock Website</p>
+      <a
+      class="text-reset"
+      href="https://github.com/reedpen/startup"
+      >Source</a
+    >
+
+    </div>
+  </footer>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0-next.1/esm/popper.js'></script>
 <script src="save.js"></script>
-
-</body>
 </html>

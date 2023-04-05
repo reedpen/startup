@@ -16,18 +16,18 @@ class PeerProxy {
     // Keep track of all the connections so we can forward messages
     let connections = [];
 
-    wss.on('connection', (ws) => {
-      const connection = { id: uuid.v4(), alive: true, ws: ws };
-      connections.push(connection);
 
-      // Forward messages to everyone except the sender
-      ws.on('message', function message(data) {
-        connections.forEach((c) => {
-          if (c.id !== connection.id) {
-            c.ws.send(data);
-          }
+    wss.on('connection', (ws) => {
+      const connection = { id: connections.length + 1, alive: true, ws: ws };
+      connections.push(connection);
+        // Forward messages to everyone except the sender
+        ws.on('message', function message(data) {
+          connections.forEach((c) => {
+            if (c.id !== connection.id) {
+              c.ws.send(data);
+            }
+          });
         });
-      });
 
       // Remove the closed connection so we don't try to forward anymore
       ws.on('close', () => {

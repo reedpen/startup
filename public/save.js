@@ -1,36 +1,31 @@
-// Get references to the textboxes
-const nameInput = document.querySelector('#recipe-name');
-const ingredientsInput = document.querySelector('#recipe-ingredients');
-const instructionsInput = document.querySelector('#recipe-instructions');
+const database = require('./database.js');
 
-// Load saved data from local storage
-const savedName = localStorage.getItem('recipeName');
-const savedIngredients = localStorage.getItem('recipeIngredients');
-const savedInstructions = localStorage.getItem('recipeInstructions');
+async function displaySavedRecipes() {
+  const user = await database.getUser(localStorage.getItem('userName'));
+  const savedRecipes = await database.getSavedRecipes(user.email);
 
+  const recipeContainer = document.getElementById('recipe-container');
+  recipeContainer.innerHTML = '';
 
-// Add event listeners to the textboxes
-nameInput.addEventListener('input', saveInput);
-ingredientsInput.addEventListener('input', saveInput);
-instructionsInput.addEventListener('input', saveInput);
-
-
-// Save the input to local storage
-function saveInput() {
-  localStorage.setItem('recipeName', nameInput.value);
-  localStorage.setItem('recipeIngredients', ingredientsInput.value);
-  localStorage.setItem('recipeSteps', instructionsInput.value);
+  savedRecipes.forEach((recipe) => {
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('col-md-4');
+    recipeCard.innerHTML = `
+      <div class="card mb-4 box-shadow">
+        <img class="card-img-top" src="${recipe.img}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">${recipe.name}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = '${recipe.link}';">View</button>
+            </div>
+            <small class="text-muted">${recipe.time}</small>
+          </div>
+        </div>
+      </div>
+    `;
+    recipeContainer.appendChild(recipeCard);
+  });
 }
 
-function loadSavedData() {
-  saveInput();
-  // Load saved data from local storage
-  var savedTitle = localStorage.getItem('recipeName');
-  var savedIngredients = localStorage.getItem('recipeIngredients');
-  var savedSteps = localStorage.getItem('recipeSteps');
-
-  // Set saved data as default values for textboxes
-  document.getElementById('recipe-title').value = savedTitle || '';
-  document.getElementById('ingredients').value = savedIngredients || '';
-  document.getElementById('steps').value = savedSteps || '';
-}
+displaySavedRecipes();

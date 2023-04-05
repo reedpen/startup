@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
-const { PeerProxy } = require('./peerProxy.js');
+const { PeerProxy } = require('./chatServer.js');
 
 const authCookieName = 'token';
 
@@ -83,17 +83,22 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
-// GetScores
-secureApiRouter.get('/scores', async (req, res) => {
-  const scores = await DB.getHighScores();
-  res.send(scores);
-});
+app.post('/save-recipe', async (req, res) => {
+  const img = req.body.img;
+  const link = req.body.link;
 
-// SubmitScore
-secureApiRouter.post('/score', async (req, res) => {
-  await DB.addScore(req.body);
-  const scores = await DB.getHighScores();
-  res.send(scores);
+  // Get the email of the logged in user from the session
+  const email = req.session.userName;
+
+  // Save the recipe to the database
+  try {
+    const save = await DB.createSave(email, img, link);
+    console.log('Recipe saved:', save);
+    res.redirect('/recipes');
+  } catch (err) {
+    console.error('Error saving recipe:', err);
+    res.status(500).send('Error saving recipe');
+  }
 });
 
 // Default error handler
